@@ -25,15 +25,18 @@ connect to the internet, so there is no server for information to be sent to and
 no one for it to be shared with.</p>
 
 <h2>The camera</h2>
-<p>Kidox Run offers an optional way to play in which the player steers by leaning
-left and right in front of the camera instead of swiping. This is off by default,
-and the camera permission is only requested if a player chooses it.</p>
-<p>When it is in use, camera frames are analysed on the device using Apple's Vision
-framework to estimate body position. The only result kept is which of three lanes
+<p>Kidox Run offers an optional way to play in which the player
+steers by leaning left and right in front of the camera instead of swiping. This is
+off by default, and the camera permission is only requested if a player chooses it.</p>
+<p>When it is in use, camera frames are analysed on the device to estimate body
+position — using Apple's Vision framework on iPhone and iPad, and Google's ML Kit
+face detection, with its model built into the app, on Android. The only result kept is which of three lanes
 the player is leaning toward. No photo or video is recorded, saved, displayed, or
 transmitted. Frames are discarded as soon as they are analysed, and none of them
 ever leave the device.</p>
 <p>If camera permission is denied, the game continues normally using swipe controls.</p>
+<p>The only Android permission Kidox Run requests is the camera, and only for this
+mode. It does not request internet access, so nothing it does can leave the device.</p>
 
 <h2>What is stored on the device</h2>
 <p>Game progress — score, coins, which times tables have been practised, and the
